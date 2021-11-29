@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="shortcut icon" href="imgs/icon_portfolio.jpg">
-    <!-- <link  href = " //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css " rel = " stylesheet " media = " all " > -->
+    <link  href = " //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css " rel = " stylesheet " media = " all " >    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- <script src="https://use.fontawesome.com/62e43a72a9.js"></script> -->
-    
     <script src="https://kit.fontawesome.com/1bb2585e05.js" crossorigin="anonymous"></script>
-    
 </head>
 
 <style>
     @import url("hover-min.css"); /*import hover.css*/
 
 *{
+    font-family: Arial
     /* margin: 0;
     padding: 0; */
 }
@@ -77,7 +75,7 @@ body{
     border: 1px solid #000;
     border-radius: 7px;
     background-color: #FFFFF0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     box-shadow: -7px -5px 15px #cbced1;
     margin: 15px;
     padding: 0 10px;
@@ -242,11 +240,126 @@ float: left;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   background-color: #2098D1;
-  background-color: #2098d1;
   color: white;
 }
 
+.btn-baixar{
+    padding: 3px 4px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 7px;
+}
 
+/* Icon Hang */
+@-webkit-keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+.hvr-icon-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+.hvr-icon-hang .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-hang:hover .hvr-icon, .hvr-icon-hang:focus .hvr-icon, .hvr-icon-hang:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+/* Icon Forward */
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.hvr-icon-forward .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+
+#btn_mostrar{
+    margin: 10px;    
+    padding: 3px 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FFFFF0;
+    font-weight: bold;
+}
+
+#img_menos{
+    height: 20px;
+}
 </style>
 <header class="cabecalho">
     <nav class="menu">
@@ -267,13 +380,20 @@ float: left;
     <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
     <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
     <!-- <button class ="link-noticia" id="link-noticia" onclick="Mostrar()">Mostrar Mais</button> -->
-    <a href="#" class="icon hvr-sink">ICONE</a>
-    <!-- <button>
-        <i class="fas fa-plus" id="link-noticia" onclick="Mostrar()"></i>
-    </button> -->
-</div>
-<div>
-    
+
+        <!-- <a class="hvr-icon-hang" id="link-noticia" onclick="Mostrar()"></a>
+            <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon"/>
+        </a> -->    
+
+        <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
+            <button type="button" class="mostrando_mais" id="btn_mostrar">
+        &nbsp;
+            <span></span><img src="expand_more_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" id="img_menos" />
+            </button>
+            <!-- <img src="expand_less_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" /> -->
+        </a>
+
+          
 </div>
 
 <div class="divCurriculo">
@@ -282,16 +402,24 @@ float: left;
             <legend>Currículo</legend>
             <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
             <a href="Currículo Kawa Ribeiro.pdf" download="">
-                <button class="hvr-back-pulse" onclick="">Baixar</button>
+                <button class="btn-baixar hvr-back-pulse" onclick="">Baixar</button>
             </a>
         </fieldset>  
 </div> 
 
-
+<i class="fa-solid fa-arrow-down"></i>  
 <div style="width: 500px; border: 1px solid #000;">
     <h1>Testando efeito</h1>
+    <a href="#" class="hvr-icon-hang">
+        Icon Spin
+        <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon" />
+      </a>
 
-    <a class="hvr-back-pulse">Back Pulse</a>
+      <a href="#" class="hvr-icon-forward">
+        Icon Forward
+        <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon" />
+      </a>
+    <!-- <a class="hvr-back-pulse">Back Pulse</a> -->
 </div>
 
 <div class="divContato">
@@ -351,19 +479,23 @@ float: left;
       
         if(txt < txt2){
             document.getElementById('texto-principal-noticia').innerHTML = txt
-            document.getElementById('link-noticia').innerHTML = 'Mostrar Menos'
+            document.querySelector('#btn_mostrar span').innerHTML = 'Mostrar Menos'
         }else{
             document.getElementById('texto-principal-noticia').innerHTML = txt2
-            document.getElementById('link-noticia').innerHTML = 'Mostrar Mais'
+            document.querySelector('#btn_mostrar span').innerHTML = 'Mostrar Mais'
         }
     })
     
     function Mostrar(){
-        if(document.getElementById('link-noticia').innerHTML == 'Mostrar Mais'){
+        if(document.getElementById('btn_mostrar').classList.contains('mostrando_mais')){
+            document.getElementById('btn_mostrar').classList.remove('mostrando_mais')
+            document.getElementById('img_menos').src = 'expand_less_black_24dp.svg'
             document.getElementById('texto-principal-noticia').innerHTML = txt
-            document.getElementById('link-noticia').innerHTML = 'Mostrar Menos'        
+            document.querySelector('#btn_mostrar span').innerHTML = 'Mostrar Menos'        
     }else{
-        document.getElementById('link-noticia').innerHTML = 'Mostrar Mais'
+        document.getElementById('btn_mostrar').classList.add('mostrando_mais')
+        document.getElementById('img_menos').src = 'expand_more_black_24dp.svg'
+        document.querySelector('#btn_mostrar span').innerHTML = 'Mostrar Mais'
         document.getElementById('texto-principal-noticia').innerHTML = txt2
     }
 }
