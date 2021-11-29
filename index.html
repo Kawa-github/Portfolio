@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="shortcut icon" href="imgs/icon_portfolio.jpg">
+    <!-- <link  href = " //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css " rel = " stylesheet " media = " all " > -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/62e43a72a9.js"></script> -->
+
+    <script src="https://kit.fontawesome.com/1bb2585e05.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+*{
+    /* margin: 0;
+    padding: 0; */
+}
+body{
+    background-color: #FFFAFA;
+}
+
+.cabecalho {
+    background: #333;
+    color: #fff;
+    border-bottom: solid 5px #4faddb;
+    height: 80px;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+    padding: 10px 15px;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a:hover {
+    background-color: #4faddb;
+    color: #000;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    margin: 0px 10px;
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    align-content: center;
+    gap: 30px;
+}
+
+.divSobre{
+    border: 1px solid #000;
+    border-radius: 7px;
+    background-color: #FFFFF0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: -7px -5px 15px #cbced1;
+    margin: 15px;
+    padding: 0 10px;
+}
+
+.divCurriculo{
+    width: 50%;
+    height: 50%; 
+}
+
+.divContato{
+    margin: 50px auto;
+    padding: 10px 25px;
+    border: 1px solid #000;
+    /* border: 1px solid #000;
+    border-radius: 7px;
+    padding: 10px 10px; */
+}
+
+.divRede{
+height: 100%;
+transition: all 0.4s ease-out;
+float: left;
+}
+
+.divRede#linkedin{
+}
+
+
+
+.divRede#gmail{
+}
+
+.divContato img{
+    /* border: 1px solid #000;
+    padding: 10px 7px;
+    border-radius: 7px; */
+
+}
+
+.icone{
+    padding: 35px;
+    width: 45px;
+    height: auto;
+}
+
+.divRede:hover{
+    cursor:pointer;
+    transform: translateY(-20px);
+}
+
+
+/* .divRede{
+    width: 60%;
+    border: 1px solid #000;
+    padding: 10px 7px;
+    border-radius: 7px;
+    
+    transition: all 0.4s ease-out;
+}
+
+.divRede:hover{
+    cursor:pointer;
+    transform: translateY(-20px);
+}
+
+.icone#linkedin{
+    background-color: aqua;
+} */
+
+/* .hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+} */
+#link-noticia{
+    padding: 2px 5px;
+    /* float: right; */
+}
+
+</style>
+<header class="cabecalho">
+    <nav class="menu">
+        <ul>
+            <li><a href="#inicio">Sobre mim</a></li>
+            <li><a href="#cursos">Currículo</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<div id="box">
+ <div class="divSobre">
+    <h2>Sobre mim</h2>
+    <p id="texto-principal-noticia">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae harum molestiae, 
+    <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
+    <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
+    <!-- <button class ="link-noticia" id="link-noticia" onclick="Mostrar()">Mostrar Mais</button> -->
+    <button>
+        <i class="fas fa-plus" id="link-noticia" onclick="Mostrar()"></i>
+    </button>
+</div>
+
+
+<div class="divCurriculo">
+    <!-- <img src="imgs/transferir.jpg" alt="foto"> -->
+        <fieldset>
+            <legend>Currículo</legend>
+            <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
+            <a href="Currículo Kawa Ribeiro.pdf" download="">
+                <button class="btn-baixar" onclick="">Baixar</button>
+            </a>
+        </fieldset>  
+</div> 
+
+<div class="divContato">
+    <h2>Contato</h2>
+    <div class="divRede" id="linkedin">
+        <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" target="_blank">
+            <img src="linkedin.png" class="icone">
+        </a>
+    </div>
+    <div class="divRede" id="gmail">
+        <a href="mailto:kawa.rfaragao@gmail.com?">
+            <img src="gmail.png" class="icone">
+        </a>
+    </div>
+    <div class="divRede" id="github">
+        <a href="https://github.com/Kawa-github/" target="_blank">
+            <img src="github-logo.png" class="icone">
+        </a>
+    </div>
+    <!-- <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" class="hvr-wobble-vertical button" > -->
+    <!-- </a> -->
+
+    <!-- <p>xxxxx-xxxx</p> -->
+</div>
+    
+
+</div>
+</body>
+
+<footer>
+    <a></a>
+</footer>
+</html>
+
+<script>
+
+    // function botao(mostrar){
+    //     setTimeout(function(){
+    //         window.location.reload()
+    //     },1000)
+    // }
+
+    document.addEventListener("click", function(e){
+            setTimeout(function(){
+                if(e.target.classList.contains("btn-baixar")){
+                    alert('Voce esta baixando meu curriculo agora')
+                }
+            },1000)
+    }) //testando o callback
+
+
+
+    $(document).ready(function(){ // jquery - ready, é disparado depois que o html for carregado
+        txt = document.getElementById('texto-principal-noticia').innerHTML
+        txt2 = txt.substr(0,100)+'...'
+        document.getElementById('texto-principal-noticia').innerHTML = txt2
+      
+        if(txt < txt2){
+            document.getElementById('texto-principal-noticia').innerHTML = txt
+            document.getElementById('link-noticia').innerHTML = 'Mostrar Menos'
+        }else{
+            document.getElementById('texto-principal-noticia').innerHTML = txt2
+            document.getElementById('link-noticia').innerHTML = 'Mostrar Mais'
+        }
+    })
+    
+    function Mostrar(){
+        if(document.getElementById('link-noticia').innerHTML == 'Mostrar Mais'){
+            document.getElementById('texto-principal-noticia').innerHTML = txt
+            document.getElementById('link-noticia').innerHTML = 'Mostrar Menos'        
+    }else{
+        document.getElementById('link-noticia').innerHTML = 'Mostrar Mais'
+        document.getElementById('texto-principal-noticia').innerHTML = txt2
+    }
+}
+
+</script>
