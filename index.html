@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="shortcut icon" href="imgs/icon_portfolio.jpg">
     <!-- <link  href = " //maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css " rel = " stylesheet " media = " all " > -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- <script src="https://use.fontawesome.com/62e43a72a9.js"></script> -->
-
+    
     <script src="https://kit.fontawesome.com/1bb2585e05.js" crossorigin="anonymous"></script>
-
+    
 </head>
 
 <style>
+    @import url("hover-min.css"); /*import hover.css*/
+
 *{
     /* margin: 0;
     padding: 0; */
@@ -167,6 +169,84 @@ float: left;
     /* float: right; */
 }
 
+
+/* Shrink */
+/* .hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+} */
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 35px;
+  width: 45px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+.hvr-back-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #2098D1;
+  background-color: #2098d1;
+  color: white;
+}
+
+
 </style>
 <header class="cabecalho">
     <nav class="menu">
@@ -187,9 +267,10 @@ float: left;
     <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
     <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
     <!-- <button class ="link-noticia" id="link-noticia" onclick="Mostrar()">Mostrar Mais</button> -->
-    <button>
+    <a href="#" class="icon hvr-sink">ICONE</a>
+    <!-- <button>
         <i class="fas fa-plus" id="link-noticia" onclick="Mostrar()"></i>
-    </button>
+    </button> -->
 </div>
 
 
@@ -199,26 +280,33 @@ float: left;
             <legend>Currículo</legend>
             <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
             <a href="Currículo Kawa Ribeiro.pdf" download="">
-                <button class="btn-baixar" onclick="">Baixar</button>
+                <button class="hvr-back-pulse" onclick="">Baixar</button>
             </a>
         </fieldset>  
 </div> 
+
+
+<div style="width: 500px; border: 1px solid #000;">
+    <h1>Testando efeito</h1>
+
+    <a class="hvr-back-pulse">Back Pulse</a>
+</div>
 
 <div class="divContato">
     <h2>Contato</h2>
     <div class="divRede" id="linkedin">
         <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" target="_blank">
-            <img src="linkedin.png" class="icone">
+            <img src="linkedin.png" class="hvr-float">
         </a>
     </div>
     <div class="divRede" id="gmail">
         <a href="mailto:kawa.rfaragao@gmail.com?">
-            <img src="gmail.png" class="icone">
+            <img src="gmail.png" class="hvr-float">
         </a>
     </div>
     <div class="divRede" id="github">
         <a href="https://github.com/Kawa-github/" target="_blank">
-            <img src="github-logo.png" class="icone">
+            <img src="github-logo.png" class="hvr-float">
         </a>
     </div>
     <!-- <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" class="hvr-wobble-vertical button" > -->
