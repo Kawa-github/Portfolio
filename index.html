@@ -20,23 +20,25 @@
     padding: 0; */
 }
 body{
-    background-color: #FFFAFA;
+    background-color: #4F4F4F;
 }
 
 .cabecalho {
     background: #333;
     color: #fff;
     border-bottom: solid 5px #4faddb;
-    height: 80px;
-}
-
-.cabecalho{
+    width: 1600px;
+    height: 70px;
+  }
+  
+  .cabecalho{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.cabecalho a {
+  }
+  .cabecalho a {
+  width: 100%;
     text-decoration: none;
     color: #eee;
     font-size: 1.3em;
@@ -49,8 +51,7 @@ body{
 }
 
 .menu a:hover {
-    background-color: #4faddb;
-    color: #000;
+    color:  #4faddb;
 }
 
 .menu ul{
@@ -72,33 +73,57 @@ body{
 }
 
 .divSobre{
-    border: 1px solid #000;
+      
     border-radius: 7px;
-    background-color: #FFFFF0;
+    background-color: #FFFFF0;  
     /* font-family: Arial, Helvetica, sans-serif; */
     box-shadow: -7px -5px 15px #cbced1;
     margin: 15px;
+    width: 700px;
     padding: 0 10px;
+    text-align: center;
+}
+
+.divSobre img{  
+  padding-top: 9px;
 }
 
 .divCurriculo{
+    /* background-color:#fff; */
+    background-color: #363636;
     width: 50%;
-    height: 50%; 
+    height: 50%;
+    border: 2px solid #4faddb; 
 }
 
 .divContato{
+    /* background-color:#fff; */
+    color: #fff;
     margin: 50px auto;
     padding: 10px 25px;
-    border: 1px solid #000;
+    border: 2px solid #4faddb;
+    width: 310px;
     /* border: 1px solid #000;
     border-radius: 7px;
     padding: 10px 10px; */
 }
 
+.divContato p{
+  padding-top: 17px;
+  float: right;
+  font-size: 11pt;
+  font-weight:700;
+  color: #DCDCDC;
+}
+
+.divContato h2{
+  font-weight: bold;
+}
+
 .divRede{
-height: 100%;
+/* height: 100%; */
 transition: all 0.4s ease-out;
-float: left;
+/* float: left; */
 }
 
 .divRede#linkedin{
@@ -248,7 +273,8 @@ float: left;
     font-weight: bold;
     border-radius: 5px;
     margin: 7px;
-}
+ }
+
 
 /* Icon Hang */
 @-webkit-keyframes hvr-icon-hang {
@@ -360,13 +386,26 @@ float: left;
 #img_menos{
     height: 20px;
 }
+
+
+footer{
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
 </style>
 <header class="cabecalho">
     <nav class="menu">
         <ul>
-            <li><a href="#inicio">Sobre mim</a></li>
-            <li><a href="#cursos">Currículo</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a href="#inicio" name="tipoMenu" onclick="MostraSobre()">Sobre mim</a>
+            </li>
+            <li>
+              <a href="#cursos" name="tipoMenu" onclick="MostraCurriculo()">Currículo</a>
+            </li>
+            <li>
+              <a href="#contato" name="tipoMenu" onclick="MostraContato()">Contato</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -374,93 +413,95 @@ float: left;
 <body>
 
 <div id="box">
- <div class="divSobre">
+ <div class="divSobre" id="divSobre">
+   <img src="foto_kawa_semfundo.png" alt="" width="200px">
     <h2>Sobre mim</h2>
     <p id="texto-principal-noticia">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae harum molestiae, 
     <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
     <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
-    <!-- <button class ="link-noticia" id="link-noticia" onclick="Mostrar()">Mostrar Mais</button> -->
-
-        <!-- <a class="hvr-icon-hang" id="link-noticia" onclick="Mostrar()"></a>
-            <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon"/>
-        </a> -->    
-
-        <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
-            <button type="button" class="mostrando_mais" id="btn_mostrar">
-        &nbsp;
-            <span></span><img src="expand_more_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" id="img_menos" />
-            </button>
-            <!-- <img src="expand_less_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" /> -->
-        </a>
-
-          
+      <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
+        <button type="button" class="mostrando_mais" id="btn_mostrar">
+            &nbsp;
+              <span></span><img src="expand_more_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" id="img_menos" />
+        </button>
+      </a>
 </div>
 
-<div class="divCurriculo">
-    <!-- <img src="imgs/transferir.jpg" alt="foto"> -->
-        <fieldset>
-            <legend>Currículo</legend>
+<div class="divCurriculo" id="divCurriculo">
+<fieldset>
             <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
             <a href="Currículo Kawa Ribeiro.pdf" download="">
                 <button class="btn-baixar hvr-back-pulse" onclick="">Baixar</button>
             </a>
         </fieldset>  
 </div> 
-
-<i class="fa-solid fa-arrow-down"></i>  
+<!-- 
 <div style="width: 500px; border: 1px solid #000;">
     <h1>Testando efeito</h1>
     <a href="#" class="hvr-icon-hang">
-        Icon Spin
+      Icon Spin
+      <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon" />
+    </a>
+
+     <a href="#" class="hvr-icon-forward">
+       Icon Forward
         <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon" />
       </a>
+</div> -->
 
-      <a href="#" class="hvr-icon-forward">
-        Icon Forward
-        <img src="arrow-down-solid.svg" class="fa-solid fa-arrow-down hvr-icon" />
-      </a>
-    <!-- <a class="hvr-back-pulse">Back Pulse</a> -->
-</div>
-
-<div class="divContato">
+<div class="divContato" id="divContato">
     <h2>Contato</h2>
+    <p>Kawã Ribeiro</p>
     <div class="divRede" id="linkedin">
-        <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" target="_blank">
-            <img src="linkedin.png" class="hvr-float">
-        </a>
+      <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" target="_blank">  <!--_blank - para abrir a Url em outra página-->
+        <img src="linkedin2.png" class="hvr-float">
+      </a>
     </div>
-    <div class="divRede" id="gmail">
-        <a href="mailto:kawa.rfaragao@gmail.com?">
-            <img src="gmail.png" class="hvr-float">
-        </a>
-    </div>
-    <div class="divRede" id="github">
-        <a href="https://github.com/Kawa-github/" target="_blank">
-            <img src="github-logo.png" class="hvr-float">
-        </a>
-    </div>
-    <!-- <a href="https://www.linkedin.com/in/kaw%C3%A3-ribeiro/" class="hvr-wobble-vertical button" > -->
-    <!-- </a> -->
 
-    <!-- <p>xxxxx-xxxx</p> -->
+    <p>kawa.rfaragao@gmail.com</p>
+    <div class="divRede" id="gmail">
+      <a href="mailto:kawa.rfaragao@gmail.com?">
+        <img src="gmail.png" class="hvr-float">
+        </a>
+    </div>
+
+    <p>Kawa-github</p>
+    <div class="divRede" id="github">
+        <a href="https://github.com/Kawa-github/" target="_blank"> 
+            <img src="github-2.png" class="hvr-float">
+        </a>
+    </div>
 </div>
     
 
-</div>
+</div> <!--Fecha box-->
 </body>
 
 <footer>
-    <a></a>
+    <p>Feito por Kawã Ribeiro</p>
 </footer>
 </html>
 
 <script>
 
-    // function botao(mostrar){
-    //     setTimeout(function(){
-    //         window.location.reload()
-    //     },1000)
-    // }
+  function MostraSobre(){
+    document.getElementById('divSobre').style.display = "inline"
+    document.getElementById('divCurriculo').style.display = "inline"
+    document.getElementById('divContato').style.display = "inline"
+  }
+
+  function MostraCurriculo(){
+    document.getElementById('divSobre').style.display = "none"
+    document.getElementById('divCurriculo').style.display = "inline"
+    document.getElementById('divContato').style.display = "none"
+  }
+
+  function MostraContato(){
+    document.getElementById('divSobre').style.display = "none"
+    document.getElementById('divCurriculo').style.display = "none"
+    document.getElementById('divContato').style.display = "inline"
+  }
+
 
     document.addEventListener("click", function(e){
             setTimeout(function(){
