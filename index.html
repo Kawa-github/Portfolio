@@ -75,13 +75,15 @@ body{
 .divSobre{
       
     border-radius: 7px;
-    background-color: #FFFFF0;  
+    border: 1px solid #4faddb  ;
+    background-color: #F8fbf8;  
     /* font-family: Arial, Helvetica, sans-serif; */
     box-shadow: -7px -5px 15px #cbced1;
     margin: 15px;
     width: 700px;
     padding: 0 10px;
     text-align: center;
+    
 }
 
 .divSobre img{  
@@ -97,7 +99,7 @@ body{
 }
 
 .divContato{
-    /* background-color:#fff; */
+    background-color: #1C1C1C;
     color: #fff;
     margin: 50px auto;
     padding: 10px 25px;
@@ -113,17 +115,22 @@ body{
   float: right;
   font-size: 11pt;
   font-weight:700;
-  color: #DCDCDC;
+  color: #D3D3D3	;
 }
 
 .divContato h2{
   font-weight: bold;
+  padding: 10px 7px;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  background-color: #363636	;
 }
 
 .divRede{
 /* height: 100%; */
 transition: all 0.4s ease-out;
 /* float: left; */
+width: 70px;
 }
 
 .divRede#linkedin{
@@ -213,7 +220,7 @@ transition: all 0.4s ease-out;
 .hvr-float {
   display: inline-block;
   vertical-align: middle;
-  padding: 35px;
+  padding: 22px;
   width: 45px;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -326,6 +333,7 @@ transition: all 0.4s ease-out;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   text-decoration: none;
+  padding: 0;
 }
 .hvr-icon-hang .hvr-icon {
   -webkit-transform: translateZ(0);
@@ -376,12 +384,15 @@ transition: all 0.4s ease-out;
 
 #btn_mostrar{
     margin: 10px;    
-    padding: 3px 1px;
+    padding-bottom: 6px;
     border-radius: 6px;
     cursor: pointer;
     background-color: #FFFFF0;
     font-weight: bold;
+    /* height: 40px; */
 }
+
+
 
 #img_menos{
     height: 20px;
@@ -391,7 +402,11 @@ transition: all 0.4s ease-out;
 footer{
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-weight:500;
+}
+
+strong{
+  color:#00BFFF;
 }
 </style>
 <header class="cabecalho">
@@ -422,7 +437,7 @@ footer{
       <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
         <button type="button" class="mostrando_mais" id="btn_mostrar">
             &nbsp;
-              <span></span><img src="expand_more_black_24dp.svg" class="fa-solid fa-arrow-down hvr-icon" id="img_menos" />
+              <span></span><img src="expand_more_black_24dp.svg" class="hvr-icon" id="img_menos" />
         </button>
       </a>
 </div>
@@ -468,7 +483,7 @@ footer{
     <p>Kawa-github</p>
     <div class="divRede" id="github">
         <a href="https://github.com/Kawa-github/" target="_blank"> 
-            <img src="github-2.png" class="hvr-float">
+            <img src="github_logo_icon_white.png" class="hvr-float">
         </a>
     </div>
 </div>
@@ -478,8 +493,9 @@ footer{
 </body>
 
 <footer>
-    <p>Feito por Kawã Ribeiro</p>
+    <p><strong>Portfólio </strong>by Kawã Ribeiro</p>
 </footer>
+
 </html>
 
 <script>
