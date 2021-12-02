@@ -31,8 +31,6 @@
         /* margin: 0;
         padding: 0; */
   }
-
-
 body{
     background-color: #4F4F4F;
 }
@@ -72,9 +70,12 @@ body{
 .menu a:hover {
     color:  #4faddb;
     /* cursor:pointer; */
+    cursor: pointer;
  }
 
-
+ a{
+   cursor: pointer;
+ }
 .menu a:active{
 
 }
@@ -111,8 +112,8 @@ body{
 }
 
 
-/* h2*/ 
- h2{
+/*h2*/
+/* h2{
   font-size: 20px;
   font-family: Cera Pro Medium;
 }
@@ -120,9 +121,9 @@ body{
 p{
   font-size: 14px;
   font-family: Cera Pro Regular;
-}
+} */
+
 /* 
- 
 .divSobre h2{
   font-family: Cera Pro Medium;
   font-size: 20px;
@@ -131,8 +132,7 @@ p{
 .divSobre p{
   font-family: Cera Pro Regular;
   font-size: 14px;
-}  */
-
+} */
 .divSobre img{  
   padding-top: 9px;
   filter: drop-shadow(0 0 0.3rem #363636);
@@ -180,7 +180,11 @@ p{
 }
 
 
-.divRede{             
+.divRede{
+/* height: 100%; */
+transition: all 0.4s ease-out;
+/* float: left; */
+width: 70px;
 }
 
 .divRede#linkedin{
@@ -205,13 +209,14 @@ p{
 }
 
 .divRede:hover{
-    /* cursor:pointer; */
+    cursor:pointer;
     transform: translateY(-20px);
 }
 
 
- .divRede{ 
+/* .divRede{
     width: 60%;
+    border: 1px solid #000;
     padding: 10px 7px;
     border-radius: 7px;
     
@@ -219,15 +224,15 @@ p{
 }
 
 .divRede:hover{
-    /* cursor:pointer; */
+    cursor:pointer;
     transform: translateY(-20px);
 }
 
 .icone#linkedin{
     background-color: aqua;
-} 
+} */
 
- .hvr-grow {
+/* .hvr-grow {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -242,14 +247,15 @@ p{
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
-} 
+} */
 #link-noticia{
     padding: 2px 5px;
     /* float: right; */
 }
 
+
 /* Shrink */
- .hvr-shrink {
+/* .hvr-shrink {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -263,7 +269,7 @@ p{
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
-} 
+} */
 
 .hvr-float {
   display: inline-block;
@@ -440,21 +446,23 @@ p{
     /* height: 40px; */
 }
 
+
+
 #img_menos{
     height: 20px;
 }
 
-footer p{
+
+footer{
   color: #fff;
   text-align: center;
+  font-weight:500;
   font-family: Cera Pro Regular;
-  font-size: 14px;
 }
 
 strong{
   color:#00BFFF;
 }
-
 </style>
 <header class="cabecalho">
     <nav class="menu">
