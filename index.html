@@ -34,14 +34,15 @@
 
 
 body{
-    background-color: #4F4F4F;
+  background: #1C1C1C;
+    /* background-color: #4F4F4F; */
 }
 
 .cabecalho {
     background: #333;
     color: #fff;
     border-bottom: solid 5px #4faddb;
-    width: 1600px;
+    width: 1550px;
     height: 70px;
     /* font-family: Cera Pro Medium; */
   }
@@ -54,33 +55,53 @@ body{
   }
 
   .cabecalho a {
-    width: 100%;
+    /* width: 100%; */
     text-decoration: none;
     color: #eee;
     /* font-family: Cera Pro Medium; */
     padding: 10px 15px;
     font-size: 20px;
+    position: relative;
 }
 
-
+.menu{position: relative;}
+/* .menu a{position: relative;} */
 .menu ul {
-    list-style: none;
+  list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
 
-.menu a:hover {
+  .menu a:hover {
     color:  #4faddb;
     /* cursor:pointer; */
- }
+  }
 
+  .menu::before{
+    content: '';
+    position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4faddb ;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
 
+  @media (hover: hover) and (pointer: fine) {
+  .menu:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+  
 .menu a:active{
-
+  
 }
 
 .menu ul{
-    display: flex;
+  display: flex;
     align-items: center;
 }
 
@@ -95,17 +116,22 @@ body{
     justify-content:space-between;
     align-content: center;
     gap: 30px;
+    
 }
 
 .divSobre{  
     border: 2px solid #4faddb  ;
     border-radius: 7px;
-    background-color: #F8fbf8;  
+    /* background-color: #2c2c2c; */
+    /* background-color: #4F4F4F; */
+    background: #1C1C1C;
+    /* background-color: #F8fbf8;   */
     /* font-family: Arial, Helvetica, sans-serif; */
     box-shadow: -7px -5px 15px #cbced1;
     margin: 15px;
-    width: 700px;
-    padding: 0 10px;
+    width: 1300px;
+    height: 430px;
+    padding: 10px 10px;
     text-align: center;
     
 }
@@ -115,11 +141,13 @@ body{
  h2{
   font-size: 20px;
   font-family: Cera Pro Medium;
+  color: #D3D3D3;
 }
 
 p{
   font-size: 14px;
   font-family: Cera Pro Regular;
+  color: #D3D3D3;
 }
 /* 
  
@@ -135,12 +163,12 @@ p{
 
 .divSobre img{  
   padding-top: 9px;
-  filter: drop-shadow(0 0 0.3rem #363636);
+  filter: drop-shadow(0 0 0.3rem #D3D3D3);
 }
 
 .divCurriculo{
     /* background-color:#fff; */
-    background-color: #363636;
+    background-color: #1C1C1C;
     width: 50%;
     height: 50%;
     border: 2px solid #4faddb; 
@@ -429,7 +457,7 @@ p{
   transform: translateX(4px);
 }
 
-
+/* 
 #btn_mostrar{
     margin: 10px;    
     padding-bottom: 6px;
@@ -438,6 +466,9 @@ p{
     background-color: #FFFFF0;
     font-weight: bold;
     /* height: 40px; */
+/*} */
+
+.mostrando_mais{
 }
 
 #img_menos{
@@ -455,12 +486,37 @@ strong{
   color:#00BFFF;
 }
 
+.flexProjeto{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+
+}
+.divProjetos{
+  display: inline-block;
+  border: 1px solid purple;
+  border-image-slice: 1;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 50px 0;
+  width: 600px;
+  height: 200px;
+  margin: 0 10px;
+}
+
+.degradeBorda{
+  border-image-source: linear-gradient(to left,#4169E1, #4faddb)
+}
+
 </style>
 <header class="cabecalho">
     <nav class="menu">
         <ul>
             <li>
               <a href="#inicio" name="tipoMenu" onclick="MostraSobre()">Sobre mim</a>
+            </li>
+            <li>
+              <a href="#projetos" name="tipoMenu" onclick="MostraProjeto()">Projetos</a>
             </li>
             <li>
               <a href="#curriculo" name="tipoMenu" onclick="MostraCurriculo()">Currículo</a>
@@ -489,13 +545,33 @@ strong{
       </a>
 </div>
 
+<div class="flexProjeto" id="divProjetos">
+    <div class="divProjetos degradeBorda">
+    <p>Site de um PetShop Utilizando PHP</p>
+      <a href="" target="_blank">
+      <button>
+        Ver Repositório
+      </button>
+    </a>
+  </div>
+
+  <div class="divProjetos degradeBorda">
+    <p>Curso Web</p>
+      <a href="" target="_blank">
+        <button>
+          Ver Repositório
+        </button>
+      </a>
+  </div>
+</div>
+
 <div class="divCurriculo" id="divCurriculo">
-<fieldset>
-            <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
+  <fieldset>
+          <iframe src="Currículo Kawa Ribeiro.pdf" width="100%" height="500"></iframe>
             <a href="Currículo Kawa Ribeiro.pdf" download="">
                 <button class="btn-baixar hvr-back-pulse" onclick="">Baixar</button>
             </a>
-        </fieldset>  
+  </fieldset>  
 </div> 
 
 <!-- 
@@ -550,21 +626,31 @@ strong{
 
   function MostraSobre(){
     document.getElementById('divSobre').style.display = "inline"
+    document.getElementById('divProjetos').style.display = "inline"
     document.getElementById('divCurriculo').style.display = "inline"
     document.getElementById('divContato').style.display = "inline"
   }
 
+  function MostraProjeto(){
+    document.getElementById('divSobre').style.display = "none"
+    document.getElementById('divProjetos').style.display = "inline"
+    document.getElementById('divCurriculo').style.display = "none"
+    document.getElementById('divContato').style.display = "none "  
+  }
   function MostraCurriculo(){
     document.getElementById('divSobre').style.display = "none"
+    document.getElementById('divProjetos').style.display = "none"
     document.getElementById('divCurriculo').style.display = "inline"
     document.getElementById('divContato').style.display = "none"
   }
 
   function MostraContato(){
     document.getElementById('divSobre').style.display = "none"
+    document.getElementById('divProjetos').style.display = "none"
     document.getElementById('divCurriculo').style.display = "none"
     document.getElementById('divContato').style.display = "inline"
   }
+
 
 
     document.addEventListener("click", function(e){
