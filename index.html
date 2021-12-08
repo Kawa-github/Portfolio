@@ -35,32 +35,33 @@
 <body>
 
 <div id="box">
- <div class="divSobre" id="divSobre">
-   <img src="foto_kawa_semfundo.png" alt="" width="200px">
-    <h2>Sobre mim</h2>
-    <p id="texto-principal-noticia">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae harum molestiae, 
-    <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
-    <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
-      <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
-        <button type="button" class="mostrando_mais" id="btn_mostrar">
-            &nbsp;
-              <span></span><img src="expand_more_black_24dp.svg" class="hvr-icon" id="img_menos" />
-        </button>
-      </a>
-</div>
+
+    <div class="divSobre" id="divSobre">
+      <img src="foto_kawa_semfundo.png" alt="" width="200px">
+       <h2>Sobre mim</h2>
+       <p id="texto-principal-noticia">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae harum molestiae, 
+       <br>numquam cupiditate inventore ducimus quasi eos facilis dolorum tempora, 
+       <br>There are many variations of passages of Lorem Ipsum available, but the majority ha</p>
+         <a href="#" class="hvr-icon-hang" onclick="Mostrar()">
+           <button type="button" class="mostrando_mais" id="btn_mostrar">
+               &nbsp;
+                 <span></span><img src="expand_more_black_24dp.svg" class="hvr-icon" id="img_menos" />
+           </button>
+         </a>
+   </div>
 
 <div class="flexProjeto" id="divProjetos">
     <div class="divProjetos degradeBorda" id="idPets">
     <p>Site de um PetShop Utilizando PHP</p>
       <a href="https://github.com/Kawa-github/projetoPets" target="_blank">
-      <button>
+      <button>  
         Ver Repositório
       </button>
     </a>
   </div>
 
   <div class="divProjetos degradeBorda" id="idCsharp">
-    <p>Projeto com Ionic</p>
+    <p>Crud com C#</p>
       <a href="https://github.com/Kawa-github/projeto_login" target="_blank">
         <button>
           Ver Repositório
@@ -115,7 +116,7 @@
 <script>
 
   function MostraSobre(){
-    document.getElementById('divSobre').style.display = "inline"
+    document.getElementById('divSobre').style.display = "block"
     document.getElementById('divProjetos').style.display = "inline"
     document.getElementById('divCurriculo').style.display = "inline"
     document.getElementById('divContato').style.display = "inline"

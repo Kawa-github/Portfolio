@@ -85,6 +85,7 @@ flex-direction: column;
 align-items: center;
 align-content: center;
 gap: 30px;  
+/* height: 1200px; */
 }
 
 /* h2*/ 
@@ -143,6 +144,7 @@ padding-top: 25px;
 height: 200px;
 display: inline-block;
 border: 1px solid;
+border-radius: 15px;
 border-image-slice: 1;
 box-sizing: border-box;
 text-align: center;
@@ -157,25 +159,31 @@ text-align: center;
 border-image-source: linear-gradient(to left,#4169E1, #4faddb)
 }
 
+
 .divProjetos button{
 margin-top: 67px;
 border-radius: 10px;
 padding:6px;
 border: none;
-background-color: red!important;
+background-color: #4169E1	;
 color: #fff;
 font-weight: bold;
 cursor:pointer;
 }
 
-/* #idPets{background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img_pets_red.png');} */
+#idPets{
+background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img_pets_red.png');
+background-position: center;
+/* background-size: 500px 200px; */
+}
 
 /* #idIonic{background-image: linear-gradient(0deg,#4faddb80,#00000090), url('../img-user.png');} */
 
-/* #idCsharp{
-  background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img_pets_red.png');
+#idCsharp{
+  background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img-user.png');
+  background-position: center;
 }
- */
+
 .divCurriculo{
 width: 50%;
 height: 50%;
@@ -377,6 +385,9 @@ animation-direction: normal, alternate;
 
 
 footer p{
+ width: 100%;
+
+bottom: 10px;
 color: #fff;
 text-align: center;
 font-family: Cera Pro Regular;
