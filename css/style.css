@@ -172,13 +172,13 @@ cursor:pointer;
 }
 
 #idPets{
-background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img_pets_red.png');
+background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../imgs/img_pets_red.png');
 background-position: center;
 }
 
 
 #idCsharp{
-  background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../img-user.png');
+  background-image:linear-gradient(0deg,#4faddb80,#00000090),url('../imgs/img-user.png');
   background-position: center;
 }
 
@@ -384,7 +384,6 @@ animation-direction: normal, alternate;
 
 footer p{
  width: 100%;
-
 bottom: 10px;
 color: #fff;
 text-align: center;
